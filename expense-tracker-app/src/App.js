@@ -1,3 +1,4 @@
+import React from "react";
 import Expenses from "./components/Expenses";
 
 function App() {
@@ -23,10 +24,16 @@ function App() {
     },
   ];
 
-  return (
-    <div className="App">
-      <Expenses items={expenses}></Expenses>
-    </div>
+  // return (
+  //   <div className="App">
+  //     <Expenses items={expenses}></Expenses>
+  //   </div>
+  // );
+
+  return React.createElement(
+    'div',
+    {},
+    React.createElement(Expenses, { items: expenses })
   );
 }
 
